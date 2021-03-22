@@ -7,24 +7,41 @@ This is the project that will be created by group 26 of the Binance Master Class
 
 Roles for the assignment;
 
-Contract;
+################
+### Contract ###
+################
 Christian 
 Andre
 Alex
 
-UI;
+############
+### UI #####
+############
 Christian
 Andre
 Somoye
 Leo
 
-Video/Demo Show;
+
+#########################
+#### Video/Demo Show ####
+#########################
 Christian
 
-Manage Github;
+
+#########################
+##### Manage Github #####
+#########################
 Johnathan
 
-Project Management;
+##########################
+### Project Management ###
+##########################
 Johnathan
 
+_____________________________________________________________________________________________
+
+#############################################################################################
+####### if you would like to add anything to this readme, please add below this line ########
+#############################################################################################
 
