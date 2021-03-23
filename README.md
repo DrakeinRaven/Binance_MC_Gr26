@@ -11,7 +11,7 @@ Roles for the assignment;
 Christian 
 Andre
 Alex
-
+Francis
 
 #### UI ####
 Christian
@@ -21,6 +21,7 @@ Leo
 
 #### Video/Demo Show ####
 Christian
+Francis
 
 #### Manage Github ####
 Johnathan
