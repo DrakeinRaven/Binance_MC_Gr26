@@ -14,7 +14,8 @@ Andre
 Alex
 Francis
 
-#### UI ####
+#### UI #### 
+[Figma File](https://www.figma.com/file/ORCE8ZUzR3e0VQEyWrs9uK/Binance_MC_Gr26?node-id=0%3A1)
 Christian
 Andre
 Somoye
