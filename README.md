@@ -1,5 +1,6 @@
 # Binance_MC_Gr26
 Binance Master Class Group 26 Project
+[Ideation Board](https://jamboard.google.com/d/1j4VE0LERr7dvsYajD1aCXFeAO6xV5KAlbSqyKHHIdJc/edit?usp=sharing) 
 
 Hi there guys, 
 
@@ -13,7 +14,8 @@ Andre
 Alex
 Francis
 
-#### UI ####
+#### UI #### 
+[Figma File](https://www.figma.com/file/ORCE8ZUzR3e0VQEyWrs9uK/Binance_MC_Gr26?node-id=0%3A1)
 Christian
 Andre
 Somoye
