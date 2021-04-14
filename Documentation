@@ -4,7 +4,7 @@ please paste below this line
 
 TKNExchange Introduction
 
-TKNExchange is a decentralized exchange built on Binance Smart Chain as a project for the Binance 8 weeks Master Class which was targeted at training and grroming blockchain developers in Africa.
+TKNExchange is a decentralized exchange built on Binance Smart Chain as a project for the Binance 8 weeks Master Class which was targeted at training and grooming blockchain developers in Africa.
 
 
 
@@ -12,7 +12,7 @@ TKNExchange is a decentralized exchange built on Binance Smart Chain as a projec
 Some of the features of TKNExchange include;
 
 Exchange
-The exchange is an automated market maker (“AMM”) that allows two tokens to be exchanged on the Binance Smart Chain. SOme of the additional benefits of using the exchange are reduced fees and low slippage. 
+The exchange is an automated market maker (“AMM”) that allows two tokens to be swapped on the Binance Smart Chain. Some of the additional benefits of using the exchange are reduced fees and low slippage. 
 
 NFT Vault
 Although this feature is still in production, this will enable anybody protect the copyright of their NFT by enabling only whitelisted addresses have access to the NFT.
@@ -26,7 +26,7 @@ How the Exchange works
 
 Exchange liquidity is provided by Liquidity Providers ("LPs") who are rewarded from the swap fees.
 
-A token swap or exchange fee of about o.2% is charged on every token swap and is shared as follows;
+A token swap or exchange fee of about 0.2% is charged on every token swap and is shared as follows;
 
 0.17% - Returned to liquidity pools in the form of a fee reward for liquidity providers.
 
