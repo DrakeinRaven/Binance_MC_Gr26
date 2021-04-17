@@ -34,3 +34,6 @@ Johnathan
 
 #### if you would like to add anything to this readme, please add below this line ####
 
+#### WhitePaper : [Link](https://hackmd.io/@Xfa4qa4vRqGvyEODCn-l0g/BkUFOiw8O)
+
+
