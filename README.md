@@ -1,5 +1,5 @@
+<img src='TKN%20Exchange.jpg' width='100'>
 
-![](TKN Exchange.jpg)
 # VAULT ON THE BLOCKCHAIN
 ## INTRODUCTION
 As the name implies, this project introduces the use of the Blockchain technology in securing
