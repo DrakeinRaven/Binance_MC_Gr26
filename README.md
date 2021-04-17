@@ -4,7 +4,7 @@ Binance Master Class Group 26 Project
 
 Hi there guys, 
 
-This is the project that will be created by group 26 of the Binance Master Class. 
+This is the project (TKN Exchange) that will be created by group 26 of the Binance Master Class. 
 
 Roles for the assignment;
 
@@ -33,4 +33,7 @@ Johnathan
 
 
 #### if you would like to add anything to this readme, please add below this line ####
+
+#### WhitePaper : [Link](https://hackmd.io/@Xfa4qa4vRqGvyEODCn-l0g/BkUFOiw8O)
+
 
