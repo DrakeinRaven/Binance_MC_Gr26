@@ -77,20 +77,32 @@ contract Vault{
         return true;
     }
 
-    function myFiles() public view returns(string[] memory){
-        return getUploadedFiles(msg.sender);
+    function myFile(uint256 index) public view returns(string memory){
+        return getUploadedFiles(msg.sender)[index];
+    }
+
+    function myFilesLength() public view returns(uint256){
+        return getUploadedFiles(msg.sender).length;
     }
 
     function myFileName(string memory fileHash) public view returns(string memory){
         return getFileName(fileHash);
     }
 
-    function myFileDelegates(string memory fileHash) public view returns(address[] memory){
-        return getDelegates(fileHash);
+    function myFileDelegate(string memory fileHash, uint256 index) public view returns(address){
+        return getDelegates(fileHash)[index];
     }
 
-    function myDelegatedFiles() public view returns(string[] memory){
-        return getDelegatedFiles(msg.sender);
+    function myFileDelegatesLength(string memory fileHash) public view returns(uint256){
+        return getDelegates(fileHash).length;
+    }
+
+    function myDelegatedFile(uint256 index) public view returns(string memory){
+        return getDelegatedFiles(msg.sender)[index];
+    }
+
+    function myDelegatedFilesLength() public view returns(uint256){
+        return getDelegatedFiles(msg.sender).length;
     }
 
     function fileUploader(string memory fileHash) public view returns(address){
