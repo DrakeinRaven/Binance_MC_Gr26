@@ -1,4 +1,4 @@
-<img src='TKN%20Exchange.jpg' width='100'>
+<img src='TKN%20Exchange.jpg' width='200'>
 
 # VAULT ON THE BLOCKCHAIN
 ## INTRODUCTION
