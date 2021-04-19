@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+body{
+    background-color: #2C382C;
+}
+.header {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.enableEthereumButton{
+    border-radius: 12px;
+    border: 2px solid #4dff4d;
+    color: black;
+}
+
+.sections{
+    border-radius: 12px;
+    border: 2px solid #4dff4d;
+    color: black;
+}
+
+h3, form{
+    text-align: center;
+    color: #ffffff;
+}
+
+form{
+    border: 2px solid black;
+    border-radius: 12px;
+    padding: 3em 0;
+    width: 60%;
+    margin: 0 auto;
+}
+
+input{
+    width: 80%;
+    margin: 1em 2em;
+    
+}
+
+.submit-btn{
+    width: 9em;
+    border-radius: 9px;
+}
+
+#dTime{
+    width: 19em;
+}
+
+
+
+</style>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title id ="header">
+    </title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.3/moment-with-locales.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.3.4/dist/web3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ipfs-http-client@49.0.4/dist/index.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/buffer@6.0.3/index.min.js"></script> -->
+</head>
+
+<body>
+    <div class="container">
+        <button class="enableEthereumButton">Connect Wallet</button>
+        <a href="#" class="sections">VAULT</a>
+        <a href="exchange.html" class="sections">EXCHANGE</a>
+        
+
+    
+        <h3>TKN EXCHANGE</h3>
+        
+
+
+        <h3>VAULT</h3>
+        <form id="fileForm" enctype="multipart/form-data">
+            <input id="filetoupload" type="file">
+            
+            Download Time: <input id="dTime" type="datetime-local">
+
+            <h5>Set Delegates</h5>
+            <input id="delegate1" type="text" placeholder="Delegate 1">
+            
+            <input id="delegate2" type="text" placeholder="Delegate 2">
+            
+            <input id="delegate3" type="text" placeholder="Delegate 3">
+            
+
+
+            <input type="submit" value="Upload File" class="submit-btn">
+
+        </form>
+
+        <h3>Your Uploaded Files</h3>
+        <div id="myFiles">My Files</div>
+        <!-- <button onclick="getMyFiles()">Get Files</button> -->
+
+
+        <h3>Your Delegated Files</h3>
+        <div id="delegatedFiles">My Delegated Files</div>
+
+
+
+
+        <a href="" id="downloadLink" style="display: none;">Download File</a>
+
+
+    </div>  
+
+    
+
+    <script src='vault.js'></script>
+
+    
+</body>
+
+</html>
