@@ -10,7 +10,7 @@
 
 
 
-> _VAULT ON THE BLOCKCHAIN_
+> ## _VAULT ON THE BLOCKCHAIN_
 ## INTRODUCTION
 As the name implies, this project introduces the use of the Blockchain technology in securing
 various file assets with the integration of a decentralized file storage system called [InterPlanetary
