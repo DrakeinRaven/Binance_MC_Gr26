@@ -15,7 +15,6 @@ nav {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  margin-top: 4%;
 }
 
 .container {
@@ -23,7 +22,7 @@ nav {
   margin: 0 auto;
 }
 
-.enableEthereumButton {
+#enableEthereumButton {
   float: right;
 }
 
@@ -43,6 +42,7 @@ form {
   background-color: rgb(231, 255, 243);
   color: #000;
 }
+
 
 
 #dTime {
