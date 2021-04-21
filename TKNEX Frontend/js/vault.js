@@ -11,206 +11,257 @@ var fileHash;
 var inpFileSize;
 var dTime;
 
-async function loadWeb3() {
-    if (window.ethereum) {
-        window.web3 = new Web3(window.ethereum);
+// async function loadWeb3() {
+//     if (window.ethereum) {
+//         window.web3 = new Web3(window.ethereum);
 
-    } else {
-        alert('Please install MetaMask!');
-    }
-}
+//     } else {
+//         alert('Please install MetaMask!');
+//     }
+// }
 
 async function loadContract() {
     // set ABI
-    var abi = [{
-        "inputs": [{
-            "internalType": "string",
-            "name": "fileHash",
-            "type": "string"
-        }],
-        "name": "fileUploader",
-        "outputs": [{
-            "internalType": "address",
-            "name": "",
-            "type": "address"
-        }],
-        "stateMutability": "view",
-        "type": "function"
-    }, {
-        "inputs": [{
-            "internalType": "string",
-            "name": "fileHash",
-            "type": "string"
-        }],
-        "name": "isFileDownloadable",
-        "outputs": [{
-            "internalType": "bool",
-            "name": "",
-            "type": "bool"
-        }],
-        "stateMutability": "view",
-        "type": "function"
-    }, {
-        "inputs": [{
-            "internalType": "uint256",
-            "name": "index",
-            "type": "uint256"
-        }],
-        "name": "myDelegatedFile",
-        "outputs": [{
-            "internalType": "string",
-            "name": "",
-            "type": "string"
-        }],
-        "stateMutability": "view",
-        "type": "function"
-    }, {
-        "inputs": [],
-        "name": "myDelegatedFilesLength",
-        "outputs": [{
-            "internalType": "uint256",
-            "name": "",
-            "type": "uint256"
-        }],
-        "stateMutability": "view",
-        "type": "function"
-    }, {
-        "inputs": [{
-            "internalType": "uint256",
-            "name": "index",
-            "type": "uint256"
-        }],
-        "name": "myFile",
-        "outputs": [{
-            "internalType": "string",
-            "name": "",
-            "type": "string"
-        }],
-        "stateMutability": "view",
-        "type": "function"
-    }, {
-        "inputs": [{
-            "internalType": "string",
-            "name": "fileHash",
-            "type": "string"
-        }, {
-            "internalType": "uint256",
-            "name": "index",
-            "type": "uint256"
-        }],
-        "name": "myFileDelegate",
-        "outputs": [{
-            "internalType": "address",
-            "name": "",
-            "type": "address"
-        }],
-        "stateMutability": "view",
-        "type": "function"
-    }, {
-        "inputs": [{
-            "internalType": "string",
-            "name": "fileHash",
-            "type": "string"
-        }],
-        "name": "myFileDelegatesLength",
-        "outputs": [{
-            "internalType": "uint256",
-            "name": "",
-            "type": "uint256"
-        }],
-        "stateMutability": "view",
-        "type": "function"
-    }, {
-        "inputs": [{
-            "internalType": "string",
-            "name": "fileHash",
-            "type": "string"
-        }],
-        "name": "myFileName",
-        "outputs": [{
-            "internalType": "string",
-            "name": "",
-            "type": "string"
-        }],
-        "stateMutability": "view",
-        "type": "function"
-    }, {
-        "inputs": [],
-        "name": "myFilesLength",
-        "outputs": [{
-            "internalType": "uint256",
-            "name": "",
-            "type": "uint256"
-        }],
-        "stateMutability": "view",
-        "type": "function"
-    }, {
-        "inputs": [{
-            "internalType": "string",
-            "name": "fileHash",
-            "type": "string"
-        }, {
-            "internalType": "string",
-            "name": "fileName",
-            "type": "string"
-        }, {
-            "internalType": "address[]",
-            "name": "delegates",
-            "type": "address[]"
-        }, {
-            "internalType": "uint256",
-            "name": "dTime",
-            "type": "uint256"
-        }],
-        "name": "uploadFile",
-        "outputs": [{
-            "internalType": "bool",
-            "name": "",
-            "type": "bool"
-        }],
-        "stateMutability": "nonpayable",
-        "type": "function"
-    }];
+    var abi = [
+        {
+            "inputs": [
+                {
+                    "internalType": "string",
+                    "name": "fileHash",
+                    "type": "string"
+                }
+            ],
+            "name": "fileUploader",
+            "outputs": [
+                {
+                    "internalType": "address",
+                    "name": "",
+                    "type": "address"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "string",
+                    "name": "fileHash",
+                    "type": "string"
+                }
+            ],
+            "name": "isFileDownloadable",
+            "outputs": [
+                {
+                    "internalType": "bool",
+                    "name": "",
+                    "type": "bool"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "index",
+                    "type": "uint256"
+                }
+            ],
+            "name": "myDelegatedFile",
+            "outputs": [
+                {
+                    "internalType": "string",
+                    "name": "",
+                    "type": "string"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "myDelegatedFilesLength",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "index",
+                    "type": "uint256"
+                }
+            ],
+            "name": "myFile",
+            "outputs": [
+                {
+                    "internalType": "string",
+                    "name": "",
+                    "type": "string"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "string",
+                    "name": "fileHash",
+                    "type": "string"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "index",
+                    "type": "uint256"
+                }
+            ],
+            "name": "myFileDelegate",
+            "outputs": [
+                {
+                    "internalType": "address",
+                    "name": "",
+                    "type": "address"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "string",
+                    "name": "fileHash",
+                    "type": "string"
+                }
+            ],
+            "name": "myFileDelegatesLength",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "string",
+                    "name": "fileHash",
+                    "type": "string"
+                }
+            ],
+            "name": "myFileName",
+            "outputs": [
+                {
+                    "internalType": "string",
+                    "name": "",
+                    "type": "string"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "myFilesLength",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "string",
+                    "name": "fileHash",
+                    "type": "string"
+                },
+                {
+                    "internalType": "string",
+                    "name": "fileName",
+                    "type": "string"
+                },
+                {
+                    "internalType": "address[]",
+                    "name": "delegates",
+                    "type": "address[]"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "dTime",
+                    "type": "uint256"
+                }
+            ],
+            "name": "uploadFile",
+            "outputs": [
+                {
+                    "internalType": "bool",
+                    "name": "",
+                    "type": "bool"
+                }
+            ],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        }
+    ];
     //set contract address
-    var contractAddress = '0xb6cb85Cd4BA455D930e1173fe79F4E35613D54F5';
+    var contractAddress = '0x7aB549C0e38eAd805c03A8FB9A539F42526CeD93';
 
     return await new window.web3.eth.Contract(abi, contractAddress);
 }
 
 // Set up web and smart contract
-async function load() {
-    await loadWeb3();
-    window.contract = await loadContract();
-    await getMyFiles();
-    window.contract.defaultAccount = await getCurrentAccount();
-    console.log(window.contract.defaultAccount);
-}
+// async function load() {
+//     await loadWeb3();
+//     window.contract = await loadContract();
+//     await getMyFiles();
+//     window.contract.defaultAccount = await getCurrentAccount();
+//     console.log(window.contract.defaultAccount);
+// }
 
-async function getCurrentAccount() {
-    const accounts = await window.web3.eth.getAccounts();
-    return accounts[0];
-}
+// async function getCurrentAccount() {
+//     const accounts = await window.web3.eth.getAccounts();
+//     return accounts[0];
+// }
 
-const ethereumButton = document.querySelector('.enableEthereumButton');
-const showAccount = document.querySelector('.showAccount');
+// const ethereumButton = document.querySelector('#enableEthereumButton');
+// const showAccount = document.querySelector('.showAccount');
 
-ethereumButton.addEventListener('click', () => {
-    getAccount();
-});
+// ethereumButton.addEventListener('click', () => {
+//     getAccount();
+// });
 
-async function getAccount() {
-    const accounts = await window.ethereum.request({
-        method: 'eth_requestAccounts'
-    });
-    const account = accounts[0];
+// async function getAccount() {
+//     const accounts = await window.ethereum.request({
+//         method: 'eth_requestAccounts'
+//     });
+//     const account = accounts[0];
 
-    ethereumButton.innerHTML = account;
+//     ethereumButton.innerHTML = account;
 
-}
+// }
 
 
 
-load();
+// load();
 
 
 // Validating the file to upload
