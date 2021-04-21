@@ -1,10 +1,20 @@
+<div align="right">
+
+![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)
+
+<br>
+
+</div>
 <img src='TKN%20Exchange.jpg' width='100'>
 
-# VAULT ON THE BLOCKCHAIN
+
+
+
+> ## _VAULT ON THE BLOCKCHAIN_
 ## INTRODUCTION
 As the name implies, this project introduces the use of the Blockchain technology in securing
 various file assets with the integration of a decentralized file storage system called [InterPlanetary
-File System(IPFS)](https://ipfs.io).
+File System(IPFS)](https://ipfs.io). Visit [here](https://pagesumm.herokuapp.com/) to see how vault works
 
 The IPFS is a protocol and peer-to-peer network for storing and sharing data in a distributed file
 system. It uses content-addressing to uniquely identify each file in a global namespace
